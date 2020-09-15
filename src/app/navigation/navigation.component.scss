@@ -1,0 +1,66 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 280px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-drawer {
+  background: transparent;
+  background-image: url('/assets/menuLateral.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.mat-divider,
+.mat-nav-list.parent-list{
+width: 80%;
+}
+
+.mat-drawer:not(.mat-drawer-side) {
+  box-shadow: none !important;
+}
+
+.mat-expansion-panel {
+  box-shadow: none !important;
+  width: 80%;
+}
+
+.mat-toolbar {
+  background: transparent;
+}
+
+.mat-drawer-content {
+  background: green;
+}
+
+.logo-container {
+  height: fit-content;
+  padding: 16px;
+  padding-right: 80px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mat-expansion-panel,
+.mat-expansion-panel-header-title {
+  background: transparent !important;
+}
+
+.selected-nav {
+  border-right-style: solid;
+  border-right-color: green;
+  border-right-width: 2px;
+}
+

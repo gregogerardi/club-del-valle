@@ -1,1 +1,121 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+@font-face {
+  font-family: existence;
+  src: url(assets/Existence-Light.otf) format("opentype");
+}
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: 'existence, monospace',
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($custom-typography);
+
+$club-del-valle-primary-pallete : (
+  '50': 'e7e8f3',
+  '100': 'c3c6e1',
+  '200': '9ba1ce',
+  '300': '727bba',
+  '400': '545eab',
+  '500': '36429c',
+  '600': '303c94',
+  '700': '29338a',
+  '800': '222b80',
+  '900': '161d6e',
+  'A100': 'a7adff',
+  'A200': '747eff',
+  'A400': '414eff',
+  'A700': '2736ff',
+    contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$club-del-valle-primary-accent : (
+  '50': 'e1fde2',
+  '100': 'b5f9b6',
+  '200': '84f686',
+  '300': '53f256',
+  '400': '2eef31',
+  '500': '09ec0d',
+  '600': '08ea0b',
+  '700': '06e709',
+  '800': '05e407',
+  '900': '02df03',
+  'A100': 'ffffff',
+  'A200': 'd3ffd3',
+  'A400': 'a0ffa0',
+  'A700': '86ff86',
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$club-del-valle-primary: mat-palette($club-del-valle-primary-pallete);
+$club-del-valle-accent: mat-palette($club-del-valle-primary-accent);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$club-del-valle-theme: mat-dark-theme((
+  color: (
+    primary: $club-del-valle-primary,
+    accent: $club-del-valle-accent,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($club-del-valle-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: existence, "Helvetica Neue", sans-serif; }
+
+.simplebar-scrollbar:before {
+  background: #05e407 !important;
+  opacity: 0.8 !important;
+}
+
+ngx-simplebar,
+.simplebar-wrapper {
+  max-height: calc(100vh - 300px) !important;
+}
