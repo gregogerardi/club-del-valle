@@ -12,14 +12,16 @@ import { SimplebarAngularModule } from 'simplebar-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { CarouselComponent } from './carousel/carousel.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

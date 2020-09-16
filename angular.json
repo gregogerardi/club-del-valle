@@ -121,8 +121,13 @@
               "devServerTarget": "club-del-valle:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "club-del-valle"
 }
