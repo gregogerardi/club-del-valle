@@ -1,0 +1,27 @@
+.outerContainer{
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.innerContainer{
+    max-width: 400px;
+    background-color: white;
+    padding: 16px
+}
+.title{
+    padding-top: 8px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    font-size: medium;
+    color: #7783e5
+}
+.body{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: small;
+    color: black;
+}
