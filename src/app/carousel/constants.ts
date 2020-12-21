@@ -4,6 +4,8 @@ export const BACKGROUND_CONTEXTS = {
     },
     covid:{
         numberOfImages: 1
+    },
+    historia:{
+        numberOfImages: 1
     }
-    
 }

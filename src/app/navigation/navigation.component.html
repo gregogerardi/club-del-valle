@@ -1,6 +1,16 @@
-<mat-sidenav-container class="sidenav-container" [hasBackdrop]="isHandset$ | async">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="'over'" [opened]="!(isHandset$ | async)" (closedStart)="expansionPanel.close()">
+<mat-sidenav-container
+  class="sidenav-container"
+  [hasBackdrop]="isHandset$ | async"
+>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="'over'"
+    [opened]="!(isHandset$ | async)"
+    (closedStart)="expansionPanel.close()"
+  >
     <mat-toolbar class="logo-container">
       <img src="/assets/delValleLogo.png" alt="logo" />
       <p>Club Del Valle</p>
@@ -8,8 +18,12 @@
     <ngx-simplebar>
       <mat-accordion>
         <mat-nav-list class="parent-list">
-          <a mat-list-item (click)="selectMenu('sede-social')" routerLink="pages/sede-social"
-            [ngClass]="{ 'selected-nav': selectedMenu === 'sede-social' }">
+          <a
+            mat-list-item
+            (click)="selectMenu('sede-social')"
+            routerLink="pages/sede-social"
+            [ngClass]="{ 'selected-nav': selectedMenu === 'sede-social' }"
+          >
             SEDE SOCIAL
           </a>
         </mat-nav-list>
@@ -19,67 +33,119 @@
             <mat-panel-title> COMPLEJO </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-nav-list>
-            <a mat-list-item (click)="selectMenu('barrancas')" routerLink="pages/barrancas"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'barrancas' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('barrancas')"
+              routerLink="pages/barrancas"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'barrancas' }"
+            >
               BARRANCAS&nbsp;<span class="mat-small">apart & spa</span>
             </a>
-            <a mat-list-item (click)="selectMenu('colonia')" routerLink="pages/colonia"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'colonia' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('colonia')"
+              routerLink="pages/colonia"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'colonia' }"
+            >
               COLONIA
             </a>
-            <a mat-list-item (click)="selectMenu('fogones')" routerLink="pages/fogones"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'fogones' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('fogones')"
+              routerLink="pages/fogones"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'fogones' }"
+            >
               FOGONES
             </a>
-            <a mat-list-item (click)="selectMenu('futbol')" routerLink="pages/futbol"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'futbol' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('futbol')"
+              routerLink="pages/futbol"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'futbol' }"
+            >
               FUTBOL
             </a>
-            <a mat-list-item (click)="selectMenu('hockey')" routerLink="pages/hockey"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'hockey' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('hockey')"
+              routerLink="pages/hockey"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'hockey' }"
+            >
               HOCKEY
             </a>
-            <a mat-list-item (click)="selectMenu('botera')" routerLink="pages/botera"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'botera' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('botera')"
+              routerLink="pages/botera"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'botera' }"
+            >
               LA BOTERA
             </a>
-            <a mat-list-item (click)="selectMenu('terraza')" routerLink="pages/terraza"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'terraza' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('terraza')"
+              routerLink="pages/terraza"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'terraza' }"
+            >
               LA TERRAZA
             </a>
-            <a mat-list-item (click)="selectMenu('pileta')" routerLink="pages/pileta"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'pileta' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('pileta')"
+              routerLink="pages/pileta"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'pileta' }"
+            >
               PILETA
             </a>
-            <a mat-list-item (click)="selectMenu('salon')" routerLink="pages/salon"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'salon' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('salon')"
+              routerLink="pages/salon"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'salon' }"
+            >
               SALON
             </a>
-            <a mat-list-item (click)="selectMenu('tenis')" routerLink="pages/tenis"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'tenis' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('tenis')"
+              routerLink="pages/tenis"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'tenis' }"
+            >
               TENIS
             </a>
           </mat-nav-list>
         </mat-expansion-panel>
         <mat-divider></mat-divider>
         <mat-nav-list class="parent-list">
-          <a mat-list-item (click)="selectMenu('historia')" routerLink="pages/historia"
-            [ngClass]="{ 'selected-nav': selectedMenu === 'historia' }">
+          <a
+            mat-list-item
+            (click)="selectMenu('historia')"
+            routerLink="pages/historia"
+            [ngClass]="{ 'selected-nav': selectedMenu === 'historia' }"
+          >
             HISTORIA
           </a>
         </mat-nav-list>
         <mat-divider></mat-divider>
         <mat-nav-list class="parent-list">
-          <a mat-list-item (click)="selectMenu('socios')" routerLink="pages/socios"
-            [ngClass]="{ 'selected-nav': selectedMenu === 'socios' }">
+          <a
+            mat-list-item
+            (click)="selectMenu('socios')"
+            routerLink="pages/socios"
+            [ngClass]="{ 'selected-nav': selectedMenu === 'socios' }"
+          >
             SOCIOS
           </a>
         </mat-nav-list>
         <ng-container *ngIf="isHandset$ | async">
           <mat-divider></mat-divider>
           <mat-nav-list class="parent-list">
-            <a mat-list-item (click)="selectMenu('covid')" routerLink="pages/covid"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'covid' }">
+            <a
+              mat-list-item
+              (click)="selectMenu('covid')"
+              routerLink="pages/covid"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'covid' }"
+            >
               COVID
             </a>
           </mat-nav-list>
@@ -91,29 +157,38 @@
     <app-carousel [selectedBackgroundContext]="selectedMenu">
       <div class="contentContainer">
         <mat-toolbar *ngIf="isHandset$ | async">
-          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+          >
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
           <span>Club Del Valle</span>
         </mat-toolbar>
-        <div [ngClass]="{
-        'withNavigationMargin': !(isHandset$ | async),
-       'content': true,
-      'reducedViewPortContent': (isHandset$ | async)}">
+        <div
+          [ngClass]="{
+            withNavigationMargin: !(isHandset$ | async),
+            content: true,
+            reducedViewPort: (isHandset$ | async)
+          }"
+        >
           <router-outlet></router-outlet>
         </div>
       </div>
     </app-carousel>
   </mat-sidenav-content>
-</mat-sidenav-container>  
-<div *ngIf="!(isHandset$ | async)" class="covidPositioner" (click)="selectMenu('covid')" routerLink="pages/covid">
+</mat-sidenav-container>
+<div
+  *ngIf="!(isHandset$ | async)"
+  class="covidPositioner"
+  (click)="selectMenu('covid')"
+  routerLink="pages/covid"
+>
   <div class="covidContainer">
-  <div class="title">
-    COVID-19
+    <div class="title">COVID-19</div>
+    <div class="body">PROTOCOLOS SANITARIOS</div>
   </div>
-  <div class="body">
-    PROTOCOLOS SANITARIOS
-  </div>
-</div>
-<div class="covidContainerTriangle"></div>
+  <div class="covidContainerTriangle"></div>
 </div>
