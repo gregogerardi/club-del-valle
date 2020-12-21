@@ -84,3 +84,45 @@ width: 99%;
   height: 100%;
 }
 
+.covidContainer{
+  background-color: #3a459f;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-bottom: 0;
+  opacity: 1;
+  z-index: 2;
+  max-width: 132px;
+}
+
+.covidPositioner{
+  position: absolute;
+  right: 50px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  max-width: 132px;
+}
+
+.covidPositioner > *{
+  pointer-events: none;
+}
+
+.covidContainerTriangle{
+  width: 0;
+  height: 0;
+  border-left: 82px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 32px solid #3a459f;
+}
+
+.title {
+  font-weight: 800;
+  font-size: medium;
+  color: #7783e5
+}
+
+.body {
+  color: white
+}

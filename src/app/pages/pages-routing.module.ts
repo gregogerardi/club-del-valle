@@ -1,3 +1,4 @@
+import { CovidComponent } from './covid/covid.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -75,6 +76,10 @@ const routes: Routes = [
       {
         path: 'socios',
         component: SociosComponent,
+      },
+      {
+        path: 'covid',
+        component: CovidComponent,
       },
     ]
   },

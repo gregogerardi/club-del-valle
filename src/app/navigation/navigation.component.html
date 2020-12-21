@@ -65,21 +65,30 @@
         <mat-nav-list class="parent-list">
           <a mat-list-item (click)="selectMenu('historia')" routerLink="pages/historia"
             [ngClass]="{ 'selected-nav': selectedMenu === 'historia' }">
-            Historia
+            HISTORIA
           </a>
         </mat-nav-list>
         <mat-divider></mat-divider>
         <mat-nav-list class="parent-list">
           <a mat-list-item (click)="selectMenu('socios')" routerLink="pages/socios"
             [ngClass]="{ 'selected-nav': selectedMenu === 'socios' }">
-            Socios
+            SOCIOS
           </a>
         </mat-nav-list>
+        <ng-container *ngIf="isHandset$ | async">
+          <mat-divider></mat-divider>
+          <mat-nav-list class="parent-list">
+            <a mat-list-item (click)="selectMenu('covid')" routerLink="pages/covid"
+              [ngClass]="{ 'selected-nav': selectedMenu === 'covid' }">
+              COVID
+            </a>
+          </mat-nav-list>
+        </ng-container>
       </mat-accordion>
     </ngx-simplebar>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-carousel>
+    <app-carousel [selectedBackgroundContext]="selectedMenu">
       <div class="contentContainer">
         <mat-toolbar *ngIf="isHandset$ | async">
           <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
@@ -96,4 +105,15 @@
       </div>
     </app-carousel>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container>  
+<div *ngIf="!(isHandset$ | async)" class="covidPositioner" (click)="selectMenu('covid')" routerLink="pages/covid">
+  <div class="covidContainer">
+  <div class="title">
+    COVID-19
+  </div>
+  <div class="body">
+    PROTOCOLOS SANITARIOS
+  </div>
+</div>
+<div class="covidContainerTriangle"></div>
+</div>

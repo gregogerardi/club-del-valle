@@ -1,3 +1,4 @@
+import { CovidComponent } from './covid/covid.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -33,6 +34,7 @@ import { SociosComponent } from './socios/socios.component';
     SalonComponent,
     TenisComponent,
     TerrazaComponent,
+    CovidComponent
   ],
   imports: [CommonModule, PagesRoutingModule],
 })
