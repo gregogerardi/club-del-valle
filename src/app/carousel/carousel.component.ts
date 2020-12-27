@@ -13,11 +13,11 @@ export class CarouselComponent {
   @Input() set selectedBackgroundContext(selectedBackgroundContext){
     this._selectedBackgroundContext=selectedBackgroundContext
     this.imagePath = interval(5000).pipe(startWith(0),
-    map((i) => `url('assets/background/${this._selectedBackgroundContext}/${(i % BACKGROUND_CONTEXTS[this._selectedBackgroundContext].numberOfImages) + 1}.jpg')`)
+    map((i) => `url('./assets/background/${this._selectedBackgroundContext}/${(i % BACKGROUND_CONTEXTS[this._selectedBackgroundContext].numberOfImages) + 1}.jpg')`)
     );
   }
   private _selectedBackgroundContext: string = 'sede-social'
   public imagePath = interval(5000).pipe(startWith(0),
-    map((i) => `url('assets/background/${this._selectedBackgroundContext}/${(i % BACKGROUND_CONTEXTS[this._selectedBackgroundContext].numberOfImages) + 1}.jpg')`)
+    map((i) => `url('./assets/background/${this._selectedBackgroundContext}/${(i % BACKGROUND_CONTEXTS[this._selectedBackgroundContext].numberOfImages) + 1}.jpg')`)
   );
 }
