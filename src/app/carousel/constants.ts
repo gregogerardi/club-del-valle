@@ -32,4 +32,7 @@ export const BACKGROUND_CONTEXTS = {
     tenis:{
         numberOfImages: 3
     },
+    socios:{
+        numberOfImages: 1
+    },
 }
