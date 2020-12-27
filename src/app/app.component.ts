@@ -1,5 +1,6 @@
 import { FIRST_IMAGES } from './contants';
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,8 @@ export class AppComponent implements OnInit {
 
   injectLinkPrefetchIn4g() {
     const connectionInformation = window.navigator['connection'];
-    if (
-      !connectionInformation ||
-      connectionInformation.effectiveType === '4g'
-    ) {
-      //generate link prefetch tag
+    //generate link prefetch tag
+    const generateTags = () =>
       FIRST_IMAGES.forEach((imageUrl) => {
         const id = `linkToPrefetch${imageUrl}`;
         if (!document.getElementById(id)) {
@@ -30,6 +28,10 @@ export class AppComponent implements OnInit {
           document.head.appendChild(linkTag);
         }
       });
+    if (connectionInformation.effectiveType === '4g') {
+      generateTags();
+    } else {
+      setTimeout(generateTags, 5000);
     }
   }
 
