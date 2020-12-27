@@ -1,18 +1,37 @@
 .outerContainer{
     max-width: 400px;
-    height: 100%;
     display: flex;
-    align-items: center;
+    flex-grow: 1;
     background-color: rgba(255, 255, 255, 0.3);
-    padding-right: 16px;
-    padding-left: 16px;
+    overflow-y: hidden;
+    height: 100%;
+    align-items: center;
 }
+
 .innerContainer{
     max-width: 400px;
-    background-color: white;
-    padding: 16px;
     opacity: 0.9;
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    overflow-y: hidden;
+    flex-direction: column;
+    max-height: 100%;
 }
+
+.verticalInnerContainer{
+    max-width: 400px;
+    background-color: white;
+    opacity: 0.9;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    max-height: 100%;
+}
+
 .title{
     padding-top: 8px;
     font-weight: 600;
@@ -32,4 +51,7 @@
     padding-bottom: 8px;
     font-size: small;
     color: black;
+}
+.bold{
+    font-weight: 600;
 }

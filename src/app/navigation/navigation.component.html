@@ -34,10 +34,7 @@
           </mat-expansion-panel-header>
           <mat-nav-list>
             <a
-              mat-list-item
-              (click)="selectMenu('barrancas')"
-              routerLink="pages/barrancas"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'barrancas' }"
+             href="https://www.apartlasbarrancas.com/" target="_blank"
             >
               BARRANCAS&nbsp;<span class="mat-small">apart & spa</span>
             </a>
@@ -80,14 +77,6 @@
               [ngClass]="{ 'selected-nav': selectedMenu === 'botera' }"
             >
               LA BOTERA
-            </a>
-            <a
-              mat-list-item
-              (click)="selectMenu('terraza')"
-              routerLink="pages/terraza"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'terraza' }"
-            >
-              LA TERRAZA
             </a>
             <a
               mat-list-item
