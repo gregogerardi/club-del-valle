@@ -12,8 +12,8 @@
     (closedStart)="expansionPanel.close()"
   >
     <mat-toolbar class="logo-container">
-      <img src="/assets/delValleLogo.png" alt="logo" />
-      <p>Club Del Valle</p>
+      <img  *ngIf="!(isHandset$ | async)" src="/assets/delValleLogo.png" alt="logo" />
+      <p class="no-margin">Club Del Valle</p>
     </mat-toolbar>
     <ngx-simplebar>
       <mat-accordion>

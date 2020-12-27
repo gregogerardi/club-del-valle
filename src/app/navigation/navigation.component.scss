@@ -48,7 +48,6 @@ width: 99%;
 .logo-container {
   height: fit-content;
   padding: 16px;
-  padding-right: 80px;
   justify-content: center;
   flex-direction: column;
 }
@@ -128,4 +127,8 @@ width: 99%;
 
 .body {
   color: white
+}
+
+.no-margin {
+  margin: 0;
 }
