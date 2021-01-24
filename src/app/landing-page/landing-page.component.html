@@ -1,1 +1,34 @@
-<p>landing-page works!</p>
+<div class="background" routerLink="pages/sede-social">
+  <div class="centralBar">
+    <div class="logo-container">
+      <img
+        src="./assets/logo/logoDelValleFilete.png"
+        alt="logo"
+        class="imgAspect"
+      />
+      <p class="garamond landingPageTitle">Club Del Valle</p>
+      <p class="landingPageSubTitle raleway-regular">BIENVENIDOS</p>
+    </div>
+    <div class="landingTip raleway-regular">
+        <p *ngIf="visibleTip">¡Click para ingresar al sitio!</p>
+    </div>
+    <div class="logosContainer">
+      <a
+        class="a-no-botom-padding"
+        (click)="preventDefault($event, 'https://www.facebook.com/clubdelvalle.oficial')"
+      >
+        <img src="./assets/logo/fbGrey.png" alt="logo" class="logoAspect" />
+      </a>
+      <a
+        class="a-no-botom-padding"
+        (click)="preventDefault($event, 'https://www.instagram.com/clubdelvalle.oficial/')"
+      >
+        <img
+          src="./assets/logo/instagramGrey.png"
+          alt="logo"
+          class="logoAspect"
+        />
+      </a>
+    </div>
+  </div>
+</div>

@@ -75,6 +75,7 @@
           </mat-expansion-panel-header>
           <mat-nav-list>
             <a
+              mat-list-item
               href="https://www.apartlasbarrancas.com/"
               target="_blank"
               [ngClass]="{
@@ -88,7 +89,6 @@
             <a
               mat-list-item
               (click)="selectMenu('colonia', drawer)"
-              routerLink="pages/colonia"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'colonia',
                 'raleway-extra-bold': selectedMenu === 'colonia',
@@ -100,7 +100,6 @@
             <a
               mat-list-item
               (click)="selectMenu('fogones', drawer)"
-              routerLink="pages/fogones"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'fogones',
                 'raleway-extra-bold': selectedMenu === 'fogones',
@@ -112,7 +111,6 @@
             <a
               mat-list-item
               (click)="selectMenu('futbol', drawer)"
-              routerLink="pages/futbol"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'futbol',
                 'raleway-extra-bold': selectedMenu === 'futbol',
@@ -124,7 +122,6 @@
             <a
               mat-list-item
               (click)="selectMenu('hockey', drawer)"
-              routerLink="pages/hockey"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'hockey',
                 'raleway-extra-bold': selectedMenu === 'hockey',
@@ -136,7 +133,6 @@
             <a
               mat-list-item
               (click)="selectMenu('botera', drawer)"
-              routerLink="pages/botera"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'botera',
                 'raleway-extra-bold': selectedMenu === 'botera',
@@ -148,7 +144,6 @@
             <a
               mat-list-item
               (click)="selectMenu('pileta', drawer)"
-              routerLink="pages/pileta"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'pileta',
                 'raleway-extra-bold': selectedMenu === 'pileta',
@@ -160,7 +155,6 @@
             <a
               mat-list-item
               (click)="selectMenu('salon', drawer)"
-              routerLink="pages/salon"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'salon',
                 'raleway-extra-bold': selectedMenu === 'salon',
@@ -172,7 +166,6 @@
             <a
               mat-list-item
               (click)="selectMenu('tenis', drawer)"
-              routerLink="pages/tenis"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'tenis',
                 'raleway-extra-bold': selectedMenu === 'tenis',
@@ -188,7 +181,6 @@
           <a
             mat-list-item
             (click)="selectMenu('historia', drawer)"
-            routerLink="pages/historia"
             [ngClass]="{
               'selected-nav': selectedMenu === 'historia',
               'raleway-extra-bold': selectedMenu === 'historia',
@@ -203,7 +195,6 @@
           <a
             mat-list-item
             (click)="selectMenu('socios', drawer)"
-            routerLink="pages/socios"
             [ngClass]="{
               'selected-nav': selectedMenu === 'socios',
               'raleway-extra-bold': selectedMenu === 'socios',
@@ -219,7 +210,6 @@
             <a
               mat-list-item
               (click)="selectMenu('covid', drawer)"
-              routerLink="pages/covid"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'covid',
                 'raleway-extra-bold': selectedMenu === 'covid',
@@ -264,7 +254,6 @@
   *ngIf="!(isHandset$ | async)"
   class="covidPositioner"
   (click)="selectMenu('covid', drawer)"
-  routerLink="pages/covid"
 >
   <div
     [ngClass]="{

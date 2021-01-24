@@ -1,3 +1,14 @@
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { LayoutModule } from '@angular/cdk/layout';
+import { SimplebarAngularModule } from 'simplebar-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselComponent } from './../carousel/carousel.component';
+import { NavigationComponent } from './../navigation/navigation.component';
 import { CovidComponent } from './covid/covid.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -30,8 +41,21 @@ import { SociosComponent } from './socios/socios.component';
     PiletaComponent,
     SalonComponent,
     TenisComponent,
-    CovidComponent
+    CovidComponent,
+    NavigationComponent,
+    CarouselComponent
   ],
-  imports: [CommonModule, PagesRoutingModule],
+  imports: [
+    CommonModule,
+     PagesRoutingModule,
+     SimplebarAngularModule,
+     LayoutModule,
+     MatToolbarModule,
+     MatButtonModule,
+     MatSidenavModule,
+     MatIconModule,
+     MatListModule,
+     MatExpansionModule
+    ],
 })
 export class PagesModule {}

@@ -1,0 +1,76 @@
+.background {
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex: row;
+  justify-content: center;
+  background-image: url("/assets/background/landing/0.jpg");
+}
+
+.centralBar {
+  width: 280px;
+  background: transparent;
+  background-image: url("/assets/menu/fondo_menu_sincurvas.jpg");
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.logo-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgAspect {
+  height: 94px;
+  width: 64px;
+  margin: 8px;
+}
+
+.logosContainer {
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.logoAspect {
+    height: 32px;
+     width: 32px;
+  }
+
+  .landingPageTitle{
+    color: white;
+    font-size: 32px;
+    padding: 8px;
+}
+
+.landingTip{
+    color: white;
+    font-size: 12px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
+}
+
+.landingPageSubTitle{
+    color: #767de7;
+    font-size: 24px;
+    padding: 8px;
+}
+
+a {
+    cursor:pointer;
+}

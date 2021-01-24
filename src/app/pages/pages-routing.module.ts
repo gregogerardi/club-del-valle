@@ -1,5 +1,6 @@
+import { PagesComponent } from './pages.component';
 import { CovidComponent } from './covid/covid.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BoteraComponent } from './complejo/botera/botera.component';
@@ -17,6 +18,7 @@ import { SociosComponent } from './socios/socios.component';
 const routes: Routes = [
   {
     path: '',
+    component: PagesComponent,
     children: [
       {
         path: '',

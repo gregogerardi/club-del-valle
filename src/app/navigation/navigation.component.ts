@@ -2,6 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Template } from '@angular/compiler/src/render3/r3_ast';
 import { Component, TemplateRef } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, shareReplay, tap } from 'rxjs/operators';
 
@@ -19,9 +20,10 @@ export class NavigationComponent {
       shareReplay(),
       tap(isHandset=>this.isHandset=isHandset)
     );
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private activatedRoute:ActivatedRoute) {}
   public selectMenu(selectedMenu: string, drawer: MatSidenav): void {
     this.selectedMenu = selectedMenu;
     this.isHandset && drawer.toggle()
-}
+    this.router.navigate([`pages/${selectedMenu}`]);
+  }
 }
