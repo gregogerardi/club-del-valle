@@ -32,7 +32,12 @@
     max-height: 100%;
 }
 
+.contact{
+    border-top: 1px solid black;
+}
+
 .title{
+    border-bottom: 1px solid black;
     padding-top: 8px;
     font-weight: 600;
     padding-bottom: 8px;
@@ -47,8 +52,8 @@
     color: #7783e5
 }
 .body{
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     font-size: small;
     color: black;
 }

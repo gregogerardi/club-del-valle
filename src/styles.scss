@@ -5,14 +5,34 @@
 // Plus imports for other components in your app.
 
 @font-face {
-  font-family: 'existence';
-  src: url(./assets/fonts/Existence-Light.otf) format("opentype");
+  font-family: 'raleway-bold';
+  src: url(./assets/fonts/Raleway-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'raleway-extra-bold';
+  src: url(./assets/fonts/Raleway-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'raleway-medium';
+  src: url(./assets/fonts/Raleway-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'raleway-regular';
+  src: url(./assets/fonts/Raleway-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'garamond';
+  src: url(./assets/fonts/GARA.TTF) format("truetype");
 }
 
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config(
-  $font-family: 'existence, monospace',
+  $font-family: 'raleway-medium, monospace',
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -108,7 +128,28 @@ $club-del-valle-theme: mat-dark-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: existence, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'raleway-medium', "Helvetica Neue", sans-serif; 
+color: #2c2b33}
+
+.raleway-bold {
+  font-family: 'raleway-bold';
+}
+
+.raleway-extra-bold {
+  font-family: 'raleway-extra-bold';
+}
+
+.raleway-medium {
+  font-family: 'raleway-medium';
+}
+
+.raleway-regular {
+  font-family: 'raleway-regular';
+}
+
+.garamond {
+  font-family: 'garamond';
+}
 
 .simplebar-scrollbar:before {
   background: #05e407 !important;
