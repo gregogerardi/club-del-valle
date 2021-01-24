@@ -1,0 +1,7 @@
+ftp ftp.clubdelvalle.com.ar
+gregorio@clubdelvalle.com.ar
+Naturaleza8520
+prompt // turn off interactive mode to do batch update
+passive // allow for connections and avoid 500 error
+lcd /Users/gregorio/Documents/club-del-valle/ftp //move in the local dir
+mput ./*  // copy evertything
