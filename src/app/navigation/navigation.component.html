@@ -12,14 +12,45 @@
     (closedStart)="expansionPanel.close()"
   >
     <mat-toolbar class="logo-container">
-      <img  *ngIf="!(isHandset$ | async)" src="./assets/logo/logoDelValleFilete.png" alt="logo" class="imgAspect"/>
-      <p class="no-margin garamond">Club Del Valle</p>
-      <a href="https://www.facebook.com/clubdelvalle.oficial" target="_blank" class="a-no-botom-padding">
-        <img  *ngIf="!(isHandset$ | async)" src="./assets/logo/fbGrey.png" alt="logo" class="logoAspect"/>
+      <img
+        *ngIf="!(isHandset$ | async)"
+        src="./assets/logo/logoDelValleFilete.png"
+        alt="logo"
+        class="imgAspect"
+      />
+      <div *ngIf="(isHandset$ | async)" class="mobileTitleContainer">
+        <img
+        src="./assets/logo/logoDelValleFilete.png"
+        alt="logo"
+        class="imgSmallAspect"
+      />
+        <p class="no-margin garamond">Club Del Valle</p>
+      </div>
+      <p *ngIf="!(isHandset$ | async)" class="no-margin garamond">Club Del Valle</p>
+      <div class="logosContainer">
+        <a
+          href="https://www.facebook.com/clubdelvalle.oficial"
+          target="_blank"
+          class="a-no-botom-padding"
+        >
+          <img
+            src="./assets/logo/fbGrey.png"
+            alt="logo"
+            class="logoAspect"
+          />
         </a>
-        <a href="https://www.facebook.com/clubdelvalle.oficial" target="_blank" class="a-no-botom-padding">
-          <img  *ngIf="!(isHandset$ | async)" src="./assets/logo/fbGrey.png" alt="logo" class="logoAspect"/>
-          </a>
+        <a
+          href="https://www.instagram.com/clubdelvalle.oficial/"
+          target="_blank"
+          class="a-no-botom-padding"
+        >
+          <img
+            src="./assets/logo/instagramGrey.png"
+            alt="logo"
+            class="logoAspect"
+          />
+        </a>
+      </div>
     </mat-toolbar>
     <ngx-simplebar>
       <mat-accordion>
@@ -28,9 +59,11 @@
             mat-list-item
             (click)="selectMenu('sede-social')"
             routerLink="pages/sede-social"
-            [ngClass]="{ 'selected-nav': selectedMenu === 'sede-social' ,
-            'raleway-extra-bold': selectedMenu === 'sede-social',
-            'raleway-regular': selectedMenu !== 'sede-social' }"
+            [ngClass]="{
+              'selected-nav': selectedMenu === 'sede-social',
+              'raleway-extra-bold': selectedMenu === 'sede-social',
+              'raleway-regular': selectedMenu !== 'sede-social'
+            }"
           >
             SEDE SOCIAL
           </a>
@@ -42,10 +75,13 @@
           </mat-expansion-panel-header>
           <mat-nav-list>
             <a
-             href="https://www.apartlasbarrancas.com/" target="_blank"
-             [ngClass]="{ 'selected-nav': selectedMenu === 'barrancas' ,
-             'raleway-extra-bold': selectedMenu === 'barrancas',
-             'raleway-regular': selectedMenu !== 'barrancas' }"
+              href="https://www.apartlasbarrancas.com/"
+              target="_blank"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'barrancas',
+                'raleway-extra-bold': selectedMenu === 'barrancas',
+                'raleway-regular': selectedMenu !== 'barrancas'
+              }"
             >
               BARRANCAS&nbsp;<span class="mat-small">apart & spa</span>
             </a>
@@ -53,9 +89,11 @@
               mat-list-item
               (click)="selectMenu('colonia')"
               routerLink="pages/colonia"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'colonia' ,
-              'raleway-extra-bold': selectedMenu === 'colonia',
-              'raleway-regular': selectedMenu !== 'colonia' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'colonia',
+                'raleway-extra-bold': selectedMenu === 'colonia',
+                'raleway-regular': selectedMenu !== 'colonia'
+              }"
             >
               COLONIA
             </a>
@@ -63,9 +101,11 @@
               mat-list-item
               (click)="selectMenu('fogones')"
               routerLink="pages/fogones"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'fogones' ,
-              'raleway-extra-bold': selectedMenu === 'fogones',
-              'raleway-regular': selectedMenu !== 'fogones' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'fogones',
+                'raleway-extra-bold': selectedMenu === 'fogones',
+                'raleway-regular': selectedMenu !== 'fogones'
+              }"
             >
               FOGONES
             </a>
@@ -73,9 +113,11 @@
               mat-list-item
               (click)="selectMenu('futbol')"
               routerLink="pages/futbol"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'futbol' ,
-              'raleway-extra-bold': selectedMenu === 'futbol',
-              'raleway-regular': selectedMenu !== 'futbol' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'futbol',
+                'raleway-extra-bold': selectedMenu === 'futbol',
+                'raleway-regular': selectedMenu !== 'futbol'
+              }"
             >
               FUTBOL
             </a>
@@ -83,9 +125,11 @@
               mat-list-item
               (click)="selectMenu('hockey')"
               routerLink="pages/hockey"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'hockey' ,
-              'raleway-extra-bold': selectedMenu === 'hockey',
-              'raleway-regular': selectedMenu !== 'hockey' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'hockey',
+                'raleway-extra-bold': selectedMenu === 'hockey',
+                'raleway-regular': selectedMenu !== 'hockey'
+              }"
             >
               HOCKEY
             </a>
@@ -93,9 +137,11 @@
               mat-list-item
               (click)="selectMenu('botera')"
               routerLink="pages/botera"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'botera' ,
-              'raleway-extra-bold': selectedMenu === 'botera',
-              'raleway-regular': selectedMenu !== 'botera' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'botera',
+                'raleway-extra-bold': selectedMenu === 'botera',
+                'raleway-regular': selectedMenu !== 'botera'
+              }"
             >
               LA BOTERA
             </a>
@@ -103,9 +149,11 @@
               mat-list-item
               (click)="selectMenu('pileta')"
               routerLink="pages/pileta"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'pileta' ,
-              'raleway-extra-bold': selectedMenu === 'pileta',
-              'raleway-regular': selectedMenu !== 'pileta' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'pileta',
+                'raleway-extra-bold': selectedMenu === 'pileta',
+                'raleway-regular': selectedMenu !== 'pileta'
+              }"
             >
               PILETA
             </a>
@@ -113,9 +161,11 @@
               mat-list-item
               (click)="selectMenu('salon')"
               routerLink="pages/salon"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'salon' ,
-              'raleway-extra-bold': selectedMenu === 'salon',
-              'raleway-regular': selectedMenu !== 'salon' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'salon',
+                'raleway-extra-bold': selectedMenu === 'salon',
+                'raleway-regular': selectedMenu !== 'salon'
+              }"
             >
               SALON
             </a>
@@ -123,9 +173,11 @@
               mat-list-item
               (click)="selectMenu('tenis')"
               routerLink="pages/tenis"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'tenis' ,
-              'raleway-extra-bold': selectedMenu === 'tenis',
-              'raleway-regular': selectedMenu !== 'tenis' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'tenis',
+                'raleway-extra-bold': selectedMenu === 'tenis',
+                'raleway-regular': selectedMenu !== 'tenis'
+              }"
             >
               TENIS
             </a>
@@ -137,9 +189,11 @@
             mat-list-item
             (click)="selectMenu('historia')"
             routerLink="pages/historia"
-            [ngClass]="{ 'selected-nav': selectedMenu === 'historia' ,
-            'raleway-extra-bold': selectedMenu === 'historia',
-            'raleway-regular': selectedMenu !== 'historia' }"
+            [ngClass]="{
+              'selected-nav': selectedMenu === 'historia',
+              'raleway-extra-bold': selectedMenu === 'historia',
+              'raleway-regular': selectedMenu !== 'historia'
+            }"
           >
             HISTORIA
           </a>
@@ -150,9 +204,11 @@
             mat-list-item
             (click)="selectMenu('socios')"
             routerLink="pages/socios"
-            [ngClass]="{ 'selected-nav': selectedMenu === 'socios' ,
-            'raleway-extra-bold': selectedMenu === 'socios',
-            'raleway-regular': selectedMenu !== 'socios' }"
+            [ngClass]="{
+              'selected-nav': selectedMenu === 'socios',
+              'raleway-extra-bold': selectedMenu === 'socios',
+              'raleway-regular': selectedMenu !== 'socios'
+            }"
           >
             SOCIOS
           </a>
@@ -164,9 +220,11 @@
               mat-list-item
               (click)="selectMenu('covid')"
               routerLink="pages/covid"
-              [ngClass]="{ 'selected-nav': selectedMenu === 'covid' ,
-              'raleway-extra-bold': selectedMenu === 'covid',
-              'raleway-regular': selectedMenu !== 'covid' }"
+              [ngClass]="{
+                'selected-nav': selectedMenu === 'covid',
+                'raleway-extra-bold': selectedMenu === 'covid',
+                'raleway-regular': selectedMenu !== 'covid'
+              }"
             >
               COVID
             </a>
@@ -208,9 +266,13 @@
   (click)="selectMenu('covid')"
   routerLink="pages/covid"
 >
-  <div [ngClass]="{'covidContainer': true,
-  'raleway-extra-bold': selectedMenu === 'covid',
-  'raleway-regular': selectedMenu !== 'covid' }">
+  <div
+    [ngClass]="{
+      covidContainer: true,
+      'raleway-extra-bold': selectedMenu === 'covid',
+      'raleway-regular': selectedMenu !== 'covid'
+    }"
+  >
     <div class="title raleway-extra-bold">COVID-19</div>
     <div class="body">PROTOCOLOS SANITARIOS</div>
   </div>
