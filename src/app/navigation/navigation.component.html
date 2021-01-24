@@ -57,7 +57,7 @@
         <mat-nav-list class="parent-list">
           <a
             mat-list-item
-            (click)="selectMenu('sede-social')"
+            (click)="selectMenu('sede-social', drawer)"
             routerLink="pages/sede-social"
             [ngClass]="{
               'selected-nav': selectedMenu === 'sede-social',
@@ -87,7 +87,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('colonia')"
+              (click)="selectMenu('colonia', drawer)"
               routerLink="pages/colonia"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'colonia',
@@ -99,7 +99,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('fogones')"
+              (click)="selectMenu('fogones', drawer)"
               routerLink="pages/fogones"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'fogones',
@@ -111,7 +111,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('futbol')"
+              (click)="selectMenu('futbol', drawer)"
               routerLink="pages/futbol"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'futbol',
@@ -123,7 +123,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('hockey')"
+              (click)="selectMenu('hockey', drawer)"
               routerLink="pages/hockey"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'hockey',
@@ -135,7 +135,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('botera')"
+              (click)="selectMenu('botera', drawer)"
               routerLink="pages/botera"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'botera',
@@ -147,7 +147,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('pileta')"
+              (click)="selectMenu('pileta', drawer)"
               routerLink="pages/pileta"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'pileta',
@@ -159,7 +159,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('salon')"
+              (click)="selectMenu('salon', drawer)"
               routerLink="pages/salon"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'salon',
@@ -171,7 +171,7 @@
             </a>
             <a
               mat-list-item
-              (click)="selectMenu('tenis')"
+              (click)="selectMenu('tenis', drawer)"
               routerLink="pages/tenis"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'tenis',
@@ -187,7 +187,7 @@
         <mat-nav-list class="parent-list">
           <a
             mat-list-item
-            (click)="selectMenu('historia')"
+            (click)="selectMenu('historia', drawer)"
             routerLink="pages/historia"
             [ngClass]="{
               'selected-nav': selectedMenu === 'historia',
@@ -202,7 +202,7 @@
         <mat-nav-list class="parent-list">
           <a
             mat-list-item
-            (click)="selectMenu('socios')"
+            (click)="selectMenu('socios', drawer)"
             routerLink="pages/socios"
             [ngClass]="{
               'selected-nav': selectedMenu === 'socios',
@@ -218,7 +218,7 @@
           <mat-nav-list class="parent-list">
             <a
               mat-list-item
-              (click)="selectMenu('covid')"
+              (click)="selectMenu('covid', drawer)"
               routerLink="pages/covid"
               [ngClass]="{
                 'selected-nav': selectedMenu === 'covid',
@@ -236,7 +236,7 @@
   <mat-sidenav-content>
     <app-carousel [selectedBackgroundContext]="selectedMenu">
       <div class="contentContainer">
-        <mat-toolbar *ngIf="isHandset$ | async">
+        <mat-toolbar *ngIf="isHandset$ | async" class="mobileToolbarBackground">
           <button
             type="button"
             aria-label="Toggle sidenav"
@@ -263,7 +263,7 @@
 <div
   *ngIf="!(isHandset$ | async)"
   class="covidPositioner"
-  (click)="selectMenu('covid')"
+  (click)="selectMenu('covid', drawer)"
   routerLink="pages/covid"
 >
   <div
