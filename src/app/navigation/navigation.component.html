@@ -226,7 +226,7 @@
   <mat-sidenav-content>
     <app-carousel [selectedBackgroundContext]="selectedMenu">
       <div class="contentContainer">
-        <mat-toolbar *ngIf="isHandset$ | async" class="mobileToolbarBackground">
+        <mat-toolbar *ngIf="isHandset$ | async">
           <button
             type="button"
             aria-label="Toggle sidenav"
