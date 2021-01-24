@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --output-path docs --base-href /club-del-valle/ && cp ./docs/index.html ./docs/404.html && git add --all && git commit -m 'deploy to gp' && git push",
-    "build-ftp": "ng build --prod --output-path docs --base-href / && cp ./docs/index.html ./docs/404.html"
+    "deploy-to-gh": "ng build --prod --output-path docs --base-href /club-del-valle/ && cp ./docs/index.html ./docs/404.html && git add --all && git commit -m 'deploy to gp' && git push",
+    "build-ftp": "ng build --prod --output-path ftp --base-href / && cp ./ftp/index.html ./ftp/404.html"
   },
   "private": true,
   "dependencies": {
