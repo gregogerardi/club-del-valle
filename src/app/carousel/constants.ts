@@ -9,16 +9,16 @@ export const BACKGROUND_CONTEXTS = {
         numberOfImages: 1
     },
     botera:{
-        numberOfImages: 4
+        numberOfImages: 9
     },
     colonia:{
-        numberOfImages: 4
+        numberOfImages: 7
     },
     fogones:{
         numberOfImages: 3
     },
     futbol:{
-        numberOfImages: 4
+        numberOfImages: 9
     },
     hockey:{
         numberOfImages: 4
